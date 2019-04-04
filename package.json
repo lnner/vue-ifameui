@@ -1,0 +1,20 @@
+{
+  "name": "vue-ifameui",
+  "version": "1.0.1",
+  "dependencies": {},
+  "description": "ui",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lnner/vue-ui.git"
+  },
+  "author": "lnner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lnner/vue-ui/issues"
+  },
+  "homepage": "https://github.com/lnner/vue-ui#readme"
+}
