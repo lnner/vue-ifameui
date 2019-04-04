@@ -1,9 +1,9 @@
-import Page from './node_modules/page.vue'
-import PercentCompleted from './node_modules/percentCompleted.vue'
-import Banner from './node_modules/banner.vue'
-import PercentCompleted from './node_modules/percentCompleted.vue'
-import BannerDocument from './node_modules/bannerDocument.vue'
-import NavTitle from './node_modules/navTitle.vue'
+import Page from './ifameui/page.vue'
+import PercentCompleted from './ifameui/percentCompleted.vue'
+import Banner from './ifameui/banner.vue'
+import PercentCompleted from './ifameui/percentCompleted.vue'
+import BannerDocument from './ifameui/bannerDocument.vue'
+import NavTitle from './ifameui/navTitle.vue'
 
 export default {
   install(Vue, options = {}) {
