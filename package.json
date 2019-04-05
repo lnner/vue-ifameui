@@ -1,6 +1,6 @@
 {
   "name": "vue-ifameui",
-  "version": "1.0.7",
+  "version": "1.0.8-0",
   "description": "ifameui",
   "main": "dist/ifame.min.js",
   "scripts": {
