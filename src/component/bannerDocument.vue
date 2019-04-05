@@ -43,7 +43,7 @@ export default {
         return {
           total: 1,
           page: 0,
-          size: 0
+          size: 10
         }
       }
     },
@@ -67,6 +67,11 @@ export default {
       animateTimer: undefined,
       resizeTimer: undefined,
       i: 0,
+      configsD:{
+          total: 1,
+          page: 0,
+          size: 10
+        },
       configDefault: {
         arrow: true,
         pag: true,
@@ -83,9 +88,14 @@ export default {
     }
   },
   watch: {
+    configs:{
+      handler(val){
+        this.configsD={...this.configsD,...this.configs}
+      }
+    },
     msg: {
       handler (val) {
-        let page = Math.floor((this.num - 1) / 10);
+        let page = Math.floor((this.num - 1) / this.configsD.size);
         for (let i = 0, len = val.numberOfElements; i < len; i++) {
           const ele = val.content[i];
           // console.log('------------page * 10 + i', page * 10 + i);
