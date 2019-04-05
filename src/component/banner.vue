@@ -104,7 +104,8 @@ export default {
   watch: {
     configs: {
       handler (val) {
-        this.configDefault = { ...this.configDefault, ...val };
+        this.configDefault = Object.assign({},this.configDefault,val);
+        // this.configDefault = { ...this.configDefault, ...val };
         clearInterval(this.animateTimer)
         clearInterval(this.runTimer)
         this.$nextTick(() => [
@@ -179,11 +180,7 @@ export default {
       this.animateTimer = setInterval(() => {
         //获取当前值
         let current = 0
-        // console.log('------------left', this.getStyleAttribute(obj, attr));
-        // console.log('------------left', obj.style[attr]);
-        // current = parseInt(obj.style[attr])//目前左移的px
         current = parseInt(this.getStyleAttribute(obj, attr))//目前左移的px
-        // console.log('------------current', current);
 
         if (current == iTarget) {//往左iTarget为负
           //判断是否达到目标值，达到则停止（鼠标放在轮播图上）
