@@ -104,8 +104,8 @@ export default {
   watch: {
     configs: {
       handler (val) {
-        this.configDefault = Object.assign({},this.configDefault,val);
-        // this.configDefault = { ...this.configDefault, ...val };
+        // this.configDefault = Object.assign({},this.configDefault,val);
+        this.configDefault = { ...this.configDefault, ...val };
         clearInterval(this.animateTimer)
         clearInterval(this.runTimer)
         this.$nextTick(() => [
